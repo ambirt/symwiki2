@@ -1,31 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <!-- get input !-->
+    <!-- save input !-->
+    <!-- note about xyz !-->
+    <!-- list all xyz !-->
+    
         <title>Capture Photo</title>
         <script type="text/javascript" charset="utf-8" src="PhoneGap.js"></script>
-        <script type="text/javascript" charset="utf-8">
-            var pictureSource,
-                destinationType
-            document.addEventListener("deviceready",loaded,false);
-            function loaded() {
-                pictureSource=navigator.camera.PictureSourceType;
-                destinationType=navigator.camera.DestinationType;
-            }
-            function getPhoto(imageData) {
-                var smallImage = document.getElementById('smallImage');
-                smallImage.style.display = 'block';
-                smallImage.src = "data:image/jpeg;base64," + imageData;
-            }
-            function capturePhoto() {
-                navigator.camera.getPicture(getPhoto, onFail, { quality: 50 });
-            }
-            function onFail(message) {
-                alert('Failed because: ' + message);
-            }
-            </script>
+        <script src="js/main.js"></script>
+        <script src="lib/jquery-1.8.2.min.js"></script>
+        
     </head>
     <body>
-        <button onclick="capturePhoto();">Capture Photo 2</button> <br>
-        <img style="width:60px;height:60px;" id="smallImage" src="" />
+        Alert 1.
     </body>
 </html>
